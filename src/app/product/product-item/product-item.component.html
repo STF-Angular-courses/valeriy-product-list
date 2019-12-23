@@ -1,0 +1,11 @@
+<ul class="product-item" style="margin: 30px">
+  <li><span>ID: {{ item.id }}</span></li>
+  <li><span>Type: {{ item.id }}</span></li>
+  <li><span>Name: {{ item.name }}</span></li>
+  <li><span>Brand: {{ item.brand }}</span></li>
+  <li><span>Description: {{ item.description}}</span></li>
+  <li><span>Price: {{ item.price | currency: 'usd'}}</span></li>
+  <li><span>Count: {{ item.count}}</span></li>
+  <button (click)="showItemDetail()">More</button>
+  <button (click)="removeItem(item.id)">Remove</button>
+</ul>

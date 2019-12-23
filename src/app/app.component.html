@@ -1,0 +1,12 @@
+<header>
+
+</header>
+<main>
+
+  <app-product-list *ngIf="showProductList" (itemToDetail)="hideAllList(); itemDetail = $event"></app-product-list>
+  <app-product-detail *ngIf="itemDetail" [item]="itemDetail"
+                      (back)="hideAllList(); showProductList= $event"></app-product-detail>
+</main>
+<footer>
+
+</footer>

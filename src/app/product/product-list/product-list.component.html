@@ -1,0 +1,10 @@
+<div class="controls-block">
+  <h1>Product List</h1>
+  <button (click)="productService.add()">Add Product</button>
+  <button (click)="productService.remove()">Remove Product</button>
+  <app-product-item *ngFor="let product of productList"
+                    [item]="product"
+                    (changeList)="updateList($event)"
+                    (showDetail)="showDetail($event)">
+  </app-product-item>
+</div>
